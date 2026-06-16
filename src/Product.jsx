@@ -12,7 +12,7 @@ function Product (){
     const value = useParams()
     return(
         <div>
-            <h1>product page</h1>
+            <h1>Product page</h1>
             <div className="product-container">
                 {
                     productData.map((product)=>{
