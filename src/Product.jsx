@@ -1,14 +1,18 @@
+import { useState } from "react"
 import { useParams } from "react-router"
 function Product (){
+
+let[productData,setProductData]=useState([])
+
     function fetchData(){
         fetch("https://fakestoreapi.com/products")
         .then((res)=>{
             return res.json()
         }).then((data)=>{
-            
+      setProductData(data)      
         })
     }
-
+fetchData()
     const value = useParams()
     return(
         <div>
